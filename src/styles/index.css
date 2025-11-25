@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white overflow-hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-neon-blue text-black font-bold rounded hover:bg-white transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 border border-neon-pink text-neon-pink font-bold rounded hover:bg-neon-pink hover:text-black transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 bg-dark-surface border border-gray-700 rounded focus:border-neon-blue focus:outline-none text-white;
+  }
+
+  /* Heavy Animations */
+  .animate-heavy-fade-in {
+    animation: heavyFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .animate-heavy-slide-up {
+    animation: heavySlideUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .animate-heavy-slide-in-right {
+    animation: heavySlideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heavySlideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes heavySlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heavyScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
